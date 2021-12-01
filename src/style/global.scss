@@ -1,0 +1,10 @@
+@import "variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  color: $light-blue;
+  background: $dark-blue;
+}
