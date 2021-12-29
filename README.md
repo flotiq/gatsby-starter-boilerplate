@@ -31,7 +31,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
    You need to create a file called `.env.development` inside the root of the directory, with the following structure:
 
     ```
-    FLOTIQ_API_KEY=YOUR FLOTIQ API KEY
+    GATSBY_FLOTIQ_API_KEY=YOUR FLOTIQ API KEY
     GA_TRACKING_ID=YOUR GA TRACKING KEY
     ```
  
