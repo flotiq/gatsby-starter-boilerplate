@@ -10,7 +10,11 @@ require('dotenv').config({
 });
 
 module.exports = {
-    /* Your site config here */
+    siteMetadata: {
+        title: 'Flotiq gatsby starter boilerplate',
+        description: 'Flotiq gatsby starter boilerplate',
+        siteUrl: 'https://example.com',
+    },
     plugins: [
         'gatsby-plugin-sass',
         {
@@ -36,7 +40,7 @@ module.exports = {
         {
             resolve: 'gatsby-source-flotiq',
             options: {
-                authToken: process.env.FLOTIQ_API_KEY,
+                authToken: process.env.GATSBY_FLOTIQ_API_KEY,
                 downloadMediaFile: true,
                 forceReload: false,
                 includeTypes: [
