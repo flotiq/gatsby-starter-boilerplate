@@ -27,7 +27,7 @@
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-plugin-sitemap": "^5.4.0",
     "gatsby-source-filesystem": "^4.4.0",
-    "gatsby-source-flotiq": "^4.1.1",
+    "gatsby-source-flotiq": "^4.1.2",
     "gatsby-transformer-sharp": "^4.4.0",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.4",
