@@ -16,7 +16,6 @@ module.exports = {
         siteUrl: 'https://example.com',
     },
     plugins: [
-        'gatsby-plugin-sass',
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
@@ -84,5 +83,6 @@ module.exports = {
                 ],
             },
         },
+        'gatsby-plugin-postcss',
     ],
 };
