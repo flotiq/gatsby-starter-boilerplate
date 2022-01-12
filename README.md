@@ -16,7 +16,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
    flotiq start [flotiqApiKey] [projectName] https://github.com/flotiq/gatsby-starter-boilerplate.git
     ```
     * `flotiqApKey` - Read and write API key to your Flotiq account
-    * `projectName` - project name or project path (if you wish to start or import data from the current directory - use `.`)
+    * `projectName` - project name or project path (if you wish to start project in or import data from the current directory - use `.`)
 
 2. **You can also start the project from template using Gatsby CLI**
 
@@ -52,7 +52,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
     flotiq import [flotiqApiKey] .
     ```
 
-    It will add no objects to your Flotiq account.
+    It will add one example object to your Flotiq account.
 
     _Note: You need to put your Read and write API key as the `flotiqApiKey` for import to work, You don't need any content types in your account._
 
