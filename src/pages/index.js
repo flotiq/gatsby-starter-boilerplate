@@ -3,18 +3,23 @@ import { Helmet } from 'react-helmet';
 import Logo from '../assets/Logo.svg';
 
 const IndexPage = () => (
-    <main>
+    <main className="flex flex-col h-screen justify-center items-center">
         <Helmet>
+            <html className="bg-dark-blue" lang="en" />
             <title>Main page</title>
         </Helmet>
-        <div className="text-center mt-5 mb-5">
-            <img src={Logo} alt="Flotiq" width="300px" />
+        <div className="m-5">
+            <img src={Logo} alt="Flotiq" width="300px" className="mx-auto" />
         </div>
-        <h1 className="text-center mt-5 mb-5">Welcome to Flotiq gatsby starter boilerplate!</h1>
-        <p className="text-center">
+        <h1 className="text-center m-24 text-5xl text-light-blue font-bold">
+            Welcome to Flotiq gatsby starter boilerplate!
+        </h1>
+        <p className="text-center text-4xl text-light-blue">
             You can learn more about Flotiq in the
             {' '}
-            <a href="https://flotiq.com/docs/" target="_blank" rel="noreferrer">documentation</a>
+            <a href="https://flotiq.com/docs/" target="_blank" rel="noreferrer" className="underline">
+                documentation
+            </a>
         </p>
     </main>
 );
