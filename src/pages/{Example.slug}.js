@@ -1,28 +1,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Button, Header } from 'flotiq-components-react';
-import Logo from '../assets/Logo.svg';
+import Layout from '../layouts/layout';
 
 /**
- * Content of index page
+ * Content of example page
  */
-const IndexPage = () => {
+const ExamplePage = ({ data }) => {
     // Extracting data from GraphQL query, the query is on the bottom of this file
-    const data = useStaticQuery(query);
+    const { example } = data;
     return (
-        <main className="flex flex-col h-screen justify-center items-center text-light-blue">
+        <Layout>
             {/* Content of <head> tag */}
             <Helmet>
-                <html className="bg-dark-blue" lang="en" />
-                <title>{data.allExample.nodes[0].title}</title>
+                <title>{example.title}</title>
             </Helmet>
-            <div className="m-5">
-                <img src={Logo} alt="Flotiq" width="300px" className="mx-auto" />
-            </div>
             {/* Example usage of Header component with text from Flotiq Content Object */}
             <Header
-                text={data.allExample.nodes[0].header}
+                text={example.header}
                 alignement="center"
                 additionalClasses={['mt-24', 'mb-12']}
             />
@@ -44,23 +40,27 @@ const IndexPage = () => {
                 {/* Example usage of button */}
                 <Button label="Go to Flotiq page" onClick={() => window.open('https://flotiq.com', '_blank').focus()} />
             </div>
-        </main>
+
+            <div className="text-center mt-5 pt-5">
+                {/* Example usage of button */}
+                <Link to="/"><Button label="Go back to index" /></Link>
+            </div>
+        </Layout>
     );
 };
 
 /**
  * GraphQL query getting data for the page
- * Here it request `header` and `title` properties from `example` content type
+ * Here it request `slug`, `header` and `title` properties from `example` content type
  */
-const query = graphql`
-    query IndexQuery {
-        allExample {
-            nodes {
-                header
-                title
-            }
+export const pageQuery = graphql`
+    query exampleQuery($slug: String!) {
+        example( slug: { eq: $slug } ) {
+            slug
+            header
+            title
         }
     }
 `;
 
-export default IndexPage;
+export default ExamplePage;

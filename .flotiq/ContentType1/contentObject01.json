@@ -1,5 +1,6 @@
 {
   "id": "example-1",
-  "header": "Welcome to Flotiq gatsby starter boilerplate!",
-  "title": "Main page"
+  "slug": "example-1",
+  "header": "Welcome to Flotiq gatsby starter boilerplate - example 1!",
+  "title": "First example"
 }
