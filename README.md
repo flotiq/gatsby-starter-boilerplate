@@ -7,6 +7,14 @@ Gatsby starter boilerplate with Flotiq source
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
+This project use:
+* [Flotiq](https://flotiq.com) - Headless CMS for string your data (You can create account [here](https://editor.flotiq.com/register.html))
+* [Tailwind](https://tailwindcss.com/) - utility-first CSS framework
+* [Flotiq source plugin](https://github.com/flotiq/gatsby-source-flotiq) - connector for fetching data from Flotiq
+* [Flotiq components for react](https://flotiq.github.io/flotiq-components-react) - components library designed and written to work perfectly with Flotiq Content Objects and display your data beautifully
+
+This project works on node ^14.17.0 || >=16.0.0, we do not support node 15.
+
 ## Quick start
 
 1. **Start the project from template using [Flotiq CLI]((https://github.com/flotiq/flotiq-cli))**
@@ -21,7 +29,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 2. **You can also start the project from template using Gatsby CLI**
 
     ```bash
-    gatsby new my-hello-world-starter https://github.com/flotiq/gatsby-starter-boilerplate.git
+    gatsby new gatsby-starter-boilerplate https://github.com/flotiq/gatsby-starter-boilerplate.git
     ```
 
 3. **Configure application**
@@ -40,7 +48,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-hello-world-starter/
+    cd gatsby-starter-boilerplate/
     gatsby develop
     ```
 
@@ -62,7 +70,7 @@ Kick off your project with this hello-world boilerplate. This starter ships with
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `gatsby-starter-boilerplate` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 6. **Manage your content using Flotiq editor**
 
@@ -74,11 +82,11 @@ Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cl
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsby-starter-boilerplate)
 
-You can also deploy this project to Heroku in 3 minutes:
+You can also deploy this project to [Heroku](https://www.heroku.com/) in 3 minutes:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/gatsby-starter-boilerplate)
 
-Or to Netlify:
+Or to [Netlify](https://www.netlify.com/):
 
 [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/gatsby-starter-boilerplate)
 
@@ -92,7 +100,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── .github
     ├── node_modules
     ├─┬ src
-    │ ├─── assets
+    │ ├── assets
     │ ├── pages
     │ └── style
     ├── .eslintignore
@@ -109,17 +117,18 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package.json
     ├── README.md
     ├── static.json
+    ├── tailwind.config.js
     └── yarn.lock
 
 1. **`.flotiq`**: This directory contains content types necessary to starter to work.
 
-2. **`.github`**: This directory contains templates of github issues. 
+2. **`.github`**: This directory contains templates of GitHub issues. 
 
-3. **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+3. **`/node_modules`**: This directory contains all packages that your project depends on (npm packages) and are automatically installed.
 
-4. **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+4. **`/src`**: This directory will contain all the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-5. **`/src/assets`**: This directory will contain all static assests for the project (images, favicons, custom fonts).
+5. **`/src/assets`**: This directory will contain all static assets for the project (images, favicons, custom fonts).
 
 6. **`/src/pages`**: This directory will contain all static pages for the project.
 
@@ -135,7 +144,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-13. **`app.json`**: Configuration file for Heroku deploy.
+13. **`app.json`**: Configuration file for Heroku deploy. You can safely remove this file if you do not plan to deploy on Heroku.
 
 14. **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
@@ -145,15 +154,17 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 17. **`LICENSE`**: This Gatsby starter is licensed under the MIT license.
 
-18. **`netlify.toml`**: Configuration file for Netlify deploy.
+18. **`netlify.toml`**: Configuration file for Netlify deploy. You can safely remove this file if you do not plan to deploy on Netlify.
 
-19. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+19. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc.). This manifest is how npm knows which packages to install for your project.
 
 20. **`README.md`**: A text file containing useful reference information about your project.
 
 21. **`static.json`**: Configuration file for caching the project.
 
-22. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your yarn dependencies that were installed for your project. **(You won’t change this file directly).**
+22. **`tailwind.config.js`**: Configuration file for tailwind.
+
+23. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your yarn dependencies that were installed for your project. **(You won’t change this file directly).**
 
 ## Learning Gatsby
 
@@ -162,6 +173,12 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to the gatsby documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## Learning Flotiq
+
+Full documentation for Flotiq lives [on this website](https://flotiq.com/docs/).
+
+Documentation for gatsby starters is [here](https://flotiq.com/docs/Universe/gatsby/).
 
 ## Collaborating
 

@@ -17,12 +17,17 @@
           "header": {
             "type": "string",
             "minLength": 1
+          },
+          "slug": {
+            "type": "string",
+            "minLength": 1
           }
         }
       }
     ],
     "required": [
       "title",
+      "slug",
       "header"
     ],
     "additionalProperties": false
@@ -41,10 +46,17 @@
         "unique": false,
         "helpText": "",
         "label": "Header"
+      },
+      "slug": {
+        "inputType": "text",
+        "unique": false,
+        "helpText": "",
+        "label": "Slug"
       }
     },
     "order": [
       "title",
+      "slug",
       "header"
     ]
   }
