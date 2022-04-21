@@ -17,25 +17,19 @@ const ExamplePage = ({ data }) => {
                 <title>{example.title}</title>
             </Helmet>
             {/* Example usage of Header component with text from Flotiq Content Object */}
-            <Header
-                text={example.header}
-                alignement="center"
-                additionalClasses={['mt-24', 'mb-12']}
-            />
+            <Header alignement="center" additionalClasses={['mt-24', 'mb-12']}>
+                {example.header}
+            </Header>
             {/* Example usage of Header component with static text */}
-            <Header
-                additionalClasses={['mb-5']}
-                level={3}
-                text={(
-                    <>
-                        You can learn more about Flotiq in the
-                        {' '}
-                        <a href="https://flotiq.com/docs/" target="_blank" rel="noreferrer" className="underline">
-                            documentation
-                        </a>
-                    </>
-                )}
-            />
+            <Header additionalClasses={['mb-5']} level={3}>
+                <>
+                    You can learn more about Flotiq in the
+                    {' '}
+                    <a href="https://flotiq.com/docs/" target="_blank" rel="noreferrer" className="underline">
+                        documentation
+                    </a>
+                </>
+            </Header>
             <div className="text-center mt-5 pt-5">
                 {/* Example usage of button */}
                 <Button label="Go to Flotiq page" onClick={() => window.open('https://flotiq.com', '_blank').focus()} />
