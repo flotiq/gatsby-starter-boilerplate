@@ -54,14 +54,14 @@ const IndexPage = ({ data, pageContext }) => {
  * Here it request `slug` and `title` properties from `example` content type
  */
 export const pageQuery = graphql`
-    query indexQuery($skip: Int!, $limit: Int!) {
-        allExample(sort: {fields: slug, order: ASC}, limit: $limit, skip: $skip,) {
-            nodes {
-                slug
-                title
-            }
-        }
+query indexQuery($skip: Int!, $limit: Int!) {
+    allExample(sort: {slug: ASC}, limit: $limit, skip: $skip) {
+      nodes {
+        slug
+        title
+      }
     }
+  }
 `;
 
 export default IndexPage;
