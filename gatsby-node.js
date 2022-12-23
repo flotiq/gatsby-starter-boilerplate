@@ -4,17 +4,15 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
     const result = await graphql(`
-        query GetExamples {
-            allExample(
-                sort: { fields: flotiqInternal___createdAt, order: DESC }
-            ) {
-                edges {
-                    node {
-                        slug
-                    }
-                }
+    query GetExamples {
+        allExample(sort: {flotiqInternal: {createdAt: DESC}}) {
+          edges {
+            node {
+              slug
             }
+          }
         }
+      }
     `);
 
     if (result.errors) {
