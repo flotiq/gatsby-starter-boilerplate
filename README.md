@@ -80,17 +80,22 @@ This project works on node >=18.0.0, as require Gatsby 5.
 
 ## Deploy
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/flotiq/gatsby-starter-boilerplate)
-
-You can also deploy this project to [Heroku](https://www.heroku.com/) in 3 minutes:
+Deploy his project to [Heroku](https://www.heroku.com/) in 3 minutes:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/gatsby-starter-boilerplate)
 
 Or to [Netlify](https://www.netlify.com/):
 
 [![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/flotiq/gatsby-starter-boilerplate)
+
+Or to [Cloudflare Workers](https://workers.cloudflare.com/):
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/flotiq/flotiq-gatsby-shop-1)
+
+### Note
+Cloudflare Workers deployment uses Flotiq starter API key, if you want to deploy a worker with your own Flotiq API key, after deployment go to your forked repository on GitHub and add a GATSBY_FLOTIQ_API secret in repository's settings, then in Actions, select "Deploy Cloudflare Worker" workflow and click "Run workflow" to deploy the worker again.
+
+More information about GitHub secrets can be found [here](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions).
 
 
 ## What's inside?
