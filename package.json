@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.17",
-    "@headlessui/react": "^1.7.19",
+    "@headlessui/react": "^2.1.2",
     "@heroicons/react": "1.0.6",
     "@popperjs/core": "^2.11.8",
     "flotiq-components-react": "^1.1.5",
