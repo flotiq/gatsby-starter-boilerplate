@@ -59,7 +59,7 @@ This project works on node >=18.0.0, as require Gatsby 5.
     If you wish to import example data to your account, before running `gatsby develop` run:
 
     ```sh
-    flotiq import . [flotiqApiKey]
+    flotiq import .flotiq [flotiqApiKey]
     ```
 
     It will add one example object to your Flotiq account.
@@ -192,4 +192,3 @@ Documentation for gatsby starters is [here](https://flotiq.com/docs/Universe/gat
 If you wish to talk with us about this project, feel free to hop on our [![Discord Chat](https://img.shields.io/discord/682699728454025410.svg)](https://discord.gg/FwXcHnX).
 
 If you found a bug, please report it in [issues](https://github.com/flotiq/gatsby-starter-boilerplate/issues).
-
