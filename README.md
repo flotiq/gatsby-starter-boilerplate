@@ -59,7 +59,7 @@ This project works on node >=18.0.0, as require Gatsby 5.
     If you wish to import example data to your account, before running `gatsby develop` run:
 
     ```sh
-    flotiq import ./flotiq [flotiqApiKey]
+    flotiq import .flotiq [flotiqApiKey]
     ```
 
     It will add one example object to your Flotiq account.
