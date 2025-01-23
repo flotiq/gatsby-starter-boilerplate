@@ -1,6 +1,8 @@
 {
   "name": "example",
   "label": "Example",
+  "workflowId": "generic",
+  "internal": false,
   "schemaDefinition": {
     "type": "object",
     "allOf": [
@@ -10,15 +12,15 @@
       {
         "type": "object",
         "properties": {
+          "slug": {
+            "type": "string",
+            "minLength": 1
+          },
           "title": {
             "type": "string",
             "minLength": 1
           },
           "header": {
-            "type": "string",
-            "minLength": 1
-          },
-          "slug": {
             "type": "string",
             "minLength": 1
           }
@@ -33,31 +35,32 @@
     "additionalProperties": false
   },
   "metaDefinition": {
-    "propertiesConfig": {
-      "title": {
-        "inputType": "text",
-        "unique": false,
-        "isTitlePart": true,
-        "helpText": "",
-        "label": "Title"
-      },
-      "header": {
-        "inputType": "text",
-        "unique": false,
-        "helpText": "",
-        "label": "Header"
-      },
-      "slug": {
-        "inputType": "text",
-        "unique": false,
-        "helpText": "",
-        "label": "Slug"
-      }
-    },
     "order": [
       "title",
       "slug",
       "header"
-    ]
-  }
+    ],
+    "propertiesConfig": {
+      "slug": {
+        "label": "Slug",
+        "unique": false,
+        "helpText": "",
+        "inputType": "text"
+      },
+      "title": {
+        "label": "Title",
+        "unique": false,
+        "helpText": "",
+        "inputType": "text",
+        "isTitlePart": true
+      },
+      "header": {
+        "label": "Header",
+        "unique": false,
+        "helpText": "",
+        "inputType": "text"
+      }
+    }
+  },
+  "featuredImage": []
 }
